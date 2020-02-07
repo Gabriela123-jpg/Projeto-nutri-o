@@ -11,6 +11,12 @@
  let Altura = tdAltura.textContent;
   // calcular imc
   let imc = peso /Altura **2;
- // escrever o IMC
+  //validar dados
+  if (peso<=0){
+      console.error("peso invalido!");
+      }
+      if (Altura<=0){
+        console.error("Altura invalida!");}
+       // escrever o IMC
  let tdimc = paciente.querySelector(".info-imc");
  tdimc.textContent = imc;
