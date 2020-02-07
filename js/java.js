@@ -15,6 +15,7 @@
   let imc = peso /Altura **2;
 
   //validar dados
+  if(pesovalido$$alturavalida)
   if (peso<=0 || peso > 1000){
       console.error("peso invalido!");
     pesovalido= false  
