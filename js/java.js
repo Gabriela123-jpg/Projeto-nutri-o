@@ -10,5 +10,5 @@
  let tdAltura = paciente.querySelector(".info-altura");
  let Altura = tdAltura.textContent;
   // calcular imc
-  let imc = peso /(Altura * Altura);
+  let imc = peso /Altura **2;
   console.log(imc)
