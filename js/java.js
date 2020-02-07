@@ -16,7 +16,7 @@
 
   //validar dados
   if(pesovalido$$alturavalida)
-  if (peso<=0 || peso > 1000){
+   (peso<=0 || peso > 1000){
       console.error("peso invalido!");
     pesovalido= false  
     }
