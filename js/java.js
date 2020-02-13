@@ -1,3 +1,8 @@
+for (var i = 0 ; i<5; i++){
+  console.log(i)
+}
+
+
 	//console.log("falha ao carregar!");            
 	let titulo = document.querySelector("#titulo");
    titulo.textContent = "Etecia Nutrição e Dietética";
@@ -14,16 +19,4 @@
  // calcular imc
   let imc = peso /Altura **2;
 
-  //validar dados
-  if(pesovalido$$alturavalida){
-   (peso<=0 || peso > 1000)
-      console.error("peso invalido!");
-    pesovalido= false  
-    
-      if (Altura<=0){
-        console.error("Altura invalida!");}
-        alturavalido= false
-        // escrever o IMC
- let tdimc = paciente.querySelector(".info-imc");
-  tdimc.textContent = imc;
-}
+  
