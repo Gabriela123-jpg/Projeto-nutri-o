@@ -15,15 +15,15 @@
   let imc = peso /Altura **2;
 
   //validar dados
-  if(pesovalido$$alturavalida)
-   (peso<=0 || peso > 1000){
+  if(pesovalido$$alturavalida){
+   (peso<=0 || peso > 1000)
       console.error("peso invalido!");
     pesovalido= false  
-    }
+    
       if (Altura<=0){
         console.error("Altura invalida!");}
         alturavalido= false
         // escrever o IMC
  let tdimc = paciente.querySelector(".info-imc");
- tdimc.textContent = imc;
- 
+  tdimc.textContent = imc;
+}
