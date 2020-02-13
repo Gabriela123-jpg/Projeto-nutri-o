@@ -26,3 +26,4 @@
         // escrever o IMC
  let tdimc = paciente.querySelector(".info-imc");
  tdimc.textContent = imc;
+ 6216522
