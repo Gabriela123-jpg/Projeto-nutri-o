@@ -1,35 +1,28 @@
    //pegar o peso
    let pacientes = document.querySelectorAll(".paciente");
+//maif facil que usar o FOR ou seja ao inves de usar o for,para cada paciente se coloca FOREACH e diminui o codigo
+//função anonima
+ pacientes.forEach ( function (paciente){
+let peso = paciente.querySelector(".info-peso").textContent;
 
-   for(var i = 0 ; i< pacientes.length; i++){
-
-    let paciente  = pacientes[i];
-
-	//console.log("falha ao carregar!");            
-	let titulo = document.querySelector("#titulo");
- titulo.textContent = "Etecia Nutrição e Dietética";
-
- let tdPeso = paciente.querySelector(".info-peso");
- let peso = tdPeso.textContent;
- let pesovalido=true
+let titulo = document.querySelector("#titulo");
+titulo.textContent = "Etecia Nutrição e Dietética";
  //pegar altura
- let tdAltura = paciente.querySelector(".info-altura");
- let Altura = tdAltura.textContent;
- let alturavalido= true
+ let Altura = paciente.querySelector(".info-altura").textContent;
+ 
+ let alturavalido= true;
+ let pesovalido=true;
  // calcular imc
- let imc = peso /Altura **2;
-
  let tdimc = paciente.querySelector(".info-imc");
+ 
+
  //validar dados
  if(peso<=0 || peso > 1000){
-   console.error("peso invalido!");
-   pesovalido= false 
-   tdimc.textContent="Peso invalido" 
-   paciente.classList.add("paciente-invalido");
+  pesovalido= false;
+  tdimc.textContent="Peso invalido" 
+  paciente.classList.add("paciente-invalido");
 }
-
- if (Altura<=0){
-  console.error("Altura invalida!");
+if (Altura<=0){
   alturavalido= false
 }
 
@@ -39,7 +32,5 @@
         let imc = peso/Altura ** 2;
         tdimc.textContent = imc.toFixed(2);
       }
-    }
-
-
+    });
 
