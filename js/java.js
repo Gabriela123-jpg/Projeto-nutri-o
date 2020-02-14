@@ -3,9 +3,7 @@
 
    for(var i = 0 ; i< pacientes.length; i++){
 
-
     let paciente  = pacientes[i];
-
 
 	//console.log("falha ao carregar!");            
 	let titulo = document.querySelector("#titulo");
@@ -21,12 +19,14 @@
  // calcular imc
  let imc = peso /Altura **2;
 
+ let tdimc = paciente.querySelector(".info-imc");
  //validar dados
  if(peso<=0 || peso > 1000){
    console.error("peso invalido!");
    pesovalido= false 
    tdimc.textContent="Peso invalido" 
- }
+   paciente.classList.add("paciente-invalido");
+}
 
  if (Altura<=0){
   console.error("Altura invalida!");
@@ -37,7 +37,6 @@
         if(pesovalido && alturavalido){
         //calcular o imc
         let imc = peso/Altura ** 2;
-        let tdimc = paciente.querySelector(".info-imc");
         tdimc.textContent = imc.toFixed(2);
       }
     }
